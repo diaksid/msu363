@@ -1,0 +1,11 @@
+a,
+input,
+button,
+.btn,
+.onclick {
+  &:hover,
+  &:focus {
+    outline: 0;
+    text-decoration: none;
+  }
+}

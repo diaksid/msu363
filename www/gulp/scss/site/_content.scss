@@ -1,0 +1,38 @@
+.form {
+  .title {
+    margin: 0 0 2rem;
+    color: $color-cyan;
+  }
+  .form-control {
+    &:hover {
+      box-shadow: 1px 1px 8px transparentize($gray-light, .5);
+    }
+    &:focus {
+      box-shadow: 1px 1px 8px transparentize($link-color, .5);
+    }
+  }
+  .btn {
+    margin: 1rem 0 0;
+  }
+}
+
+#form-contact {
+  textarea {
+    min-height: 15em;
+    @include media-breakpoint-down(sm) {
+      min-height: inherit;
+    }
+  }
+}
+
+#messages {
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .alert {
+    margin: .5rem 0;
+  }
+}
