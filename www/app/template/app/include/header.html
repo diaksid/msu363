@@ -1,5 +1,15 @@
 <header id="header">
     <div class="container">
-        <h1 class="text-xs-center">{{ name|default(title) }}</h1>
+        <div class="row">
+            <div class="col-xs-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                <canvas class="img-fluid bg-cover"
+                        width="1140"
+                        height="271"
+                        data-lazy="{{ static }}/img/logotype.shadow.png"
+                >
+                    <h1 class="text-hide">{{ name|default(title) }}</h1>
+                </canvas>
+            </div>
+        </div>
     </div>
 </header>
