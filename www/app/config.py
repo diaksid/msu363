@@ -30,7 +30,7 @@ minify = dict(
     code=True,
 )
 
-static = '//web.msu363.ru/assets/0'
+static = '//web.msu363.ru/assets/1'
 media = '//web.msu363.ru/media'
 
 mail = dict(
