@@ -14,7 +14,7 @@
   .container {
     position: relative;
     z-index: 1;
-    background: $body-bg;
+    // background: $body-bg;
     &::before {
       content: "";
       display: block;

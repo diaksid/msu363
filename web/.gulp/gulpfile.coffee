@@ -3,7 +3,7 @@ gulp = require 'gulp'
 
 src = '.'
 lib = '/var/web/vendor'
-dest = '../../web/assets'
+dest = '../assets'
 
 css = require "#{ lib }/gulp/css"
 js = require "#{ lib }/gulp/js"
