@@ -2,12 +2,21 @@ html {
   position: relative;
   overflow-y: scroll;
   min-height: 100%;
-  background: url('#{$img-path}/bg/cover.jpg') center no-repeat transparent;
-  background-size: cover;
 }
-
 
 body {
   font-family: Roboto, $font-family-base;
   background: transparent;
+}
+
+#page-cover {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: center no-repeat transparent;
+  background-size: cover;
+  will-change: background;
 }

@@ -1,7 +1,7 @@
 #header {
   .container {
     margin-top:  ($spacer * 4);
-    margin-bottom: ($spacer * 3);
+    margin-bottom: ($spacer * 2);
     @include media-breakpoint-down(sm) {
       margin-top:  ($spacer * .5);
       margin-bottom: ($spacer * .5);

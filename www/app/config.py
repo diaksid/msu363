@@ -30,12 +30,12 @@ minify = dict(
     code=True,
 )
 
-static = '//web.msu363.ru/assets/1'
+static = '//web.msu363.ru/assets/3'
 media = '//web.msu363.ru/media'
 
 mail = dict(
     address=('МСУ 363', 'admin@msu363.ru',),
-    recipients='mail@msu363.ru',
+    recipients='info@msu363.ru',
     server=('smtp.yandex.ru', 465,),
     user=('admin@msu363.ru', '+1234567',),
     ssl=True,

@@ -23,4 +23,8 @@
     <script src="{{ static }}/js/app{% if not debug %}.min{% endif %}.js"></script>
 
     {% include 'app/include/yandex.metrika.html' %}
+
+    <div id="page-cover"
+         aria-hidden="true"
+         data-lazy="{{ static }}/img/bg/cover.jpg"></div>
 {% endblock foot %}
