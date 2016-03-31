@@ -32,11 +32,13 @@ gulp.task 'styles:defer', ->
 gulp.task 'scripts:site', ->
   js.coffee dest, [
     "#{ lib }/.proj/javascript/jquery/proj.coffee"
+    "#{ lib }/.proj/javascript/jquery/_utils.coffee"
     "#{ lib }/.proj/javascript/jquery/_animation.coffee"
     "#{ lib }/.proj/javascript/jquery/_extend.coffee"
-    "#{ lib }/.proj/javascript/jquery/_utils.coffee"
-    "#{ lib }/.proj/javascript/jquery/vendor/_fancybox.coffee"
+    "#{ lib }/.proj/javascript/jquery/lazyload.coffee"
+    "#{ lib }/.proj/javascript/jquery/lightbox.coffee"
     "#{ lib }/.proj/javascript/jquery/vendor/_yandex.coffee"
+
     "#{ src }/coffee/core.coffee"
   ],
     concat: 'app'
@@ -48,26 +50,18 @@ gulp.task 'scripts:vendor', ->
 
     "#{ lib }/jquery/cookie/jquery.cookie.js"
     "#{ lib }/jquery/easing/jquery.easing.js"
-    "#{ lib }/jquery/lazyload/jquery.lazyload.js"
 
     "#{ lib }/bootstrap/js/util.js"
     "#{ lib }/bootstrap/js/alert.js"
     "#{ lib }/bootstrap/js/button.js"
     "#{ lib }/bootstrap/js/collapse.js"
     "#{ lib }/bootstrap/js/dropdown.js"
-#    "#{ lib }/bootstrap/js/tab.js"
+    "#{ lib }/bootstrap/js/tab.js"
+    "#{ lib }/bootstrap/js/scrollspy.js"
   ],
     concat: 'vendor'
 
-
-gulp.task 'scripts:defer', ->
-  js dest, [
-    "#{ lib }/bootstrap/js/scrollspy.js"
-    "#{ lib }/bootstrap/js/modal.js"
-    "#{ lib }/bootstrap/js/carousel.js"
-  ]
-
-
+###
 gulp.task 'scripts:tethers', ->
   js dest, [
     "#{ lib }/tether/tether.js"
@@ -97,7 +91,7 @@ gulp.task 'scripts:jcarousel', ->
     "#{ lib }/jquery/jcarousel/autoscroll.js"
   ],
     concat: 'jcarousel'
-
+###
 
 gulp.task 'scripts:tools', ->
   gulp.src([
@@ -166,16 +160,14 @@ gulp.task 'watch', ->
   ]
 
   gulp.watch [
-    "#{ lib }/.proj/javascript/jquery/*.coffee"
-    "#{ src }/coffee/*.coffee"
+    "#{ lib }/.proj/javascript/jquery/**.coffee"
+    "#{ src }/coffee/**.coffee"
   ], ['scripts:site']
 
   gulp.watch [
     "#{ lib }/wow/wow.js"
     "#{ lib }/jquery/cookie/jquery.cookie.js"
     "#{ lib }/jquery/easing/jquery.easing.js"
-    "#{ lib }/jquery/bgswitcher/jquery.bgswitcher.js"
-    "#{ lib }/jquery/lazyload/jquery.lazyload.js"
 
     "#{ lib }/bootstrap/js/util.js"
     "#{ lib }/bootstrap/js/alert.js"
@@ -187,7 +179,7 @@ gulp.task 'watch', ->
   ], [
     'scripts:vendor'
   ]
-
+  ###
   gulp.watch [
     "#{ lib }/bootstrap/js/carousel.js"
     "#{ lib }/bootstrap/js/modal.js"
@@ -216,7 +208,7 @@ gulp.task 'watch', ->
   ], [
     'scripts:jcarousel'
   ]
-
+  ###
   gulp.watch [
     "#{ lib }/html5/*.js"
     "#{ lib }/jquery/2.1.4/*.js"
@@ -251,10 +243,10 @@ gulp.task 'default', [
 
   'scripts:site'
   'scripts:vendor'
-  'scripts:defer'
-  'scripts:tethers'
-  'scripts:fancybox'
-  'scripts:jcarousel'
+  # 'scripts:defer'
+  # 'scripts:tethers'
+  # 'scripts:fancybox'
+  # 'scripts:jcarousel'
   'scripts:tools'
 
   'images:site'

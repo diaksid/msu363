@@ -15,7 +15,7 @@
   $ ->
     new WOW(offset: 0).init()
 
-    jPro.lazy '[data-lazy]'
+    jPro.lazyload().load()
 
     $('a.active, .active > a').on 'click', (event) -> event.preventDefault()
 
@@ -30,7 +30,7 @@
     $('.w3c').on 'click', jPro.w3c
     $('.ymet').on 'click', jPro.ymet
 
-    jPro.lightbox '[data-lightbox]'
+    jPro.lightbox('[data-lightbox]').load()
 
     $autosize = $ '.autosize'
     jPro.script 'js/lib/jquery.autosize.js', -> $autosize.autosize() if $autosize.length
